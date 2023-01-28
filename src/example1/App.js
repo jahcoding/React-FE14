@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useRef, useState, useCallback } from 'react';
 
 // useRef 
 
@@ -16,12 +16,10 @@ function App() {
     setNumbers((prev) => [...prev, prev[prev.length - 1] + 1]);
   };
 
-  // useEffect(() => {
-  // }, [])
 
   const handleScroll = useCallback(() => {
     console.log('Scroll');
-  }, [numbers])
+  }, [])
 
   const start = () => {
     ulRef.current.addEventListener('scroll', handleScroll)
